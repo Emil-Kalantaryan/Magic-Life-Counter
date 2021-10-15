@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Magic Life Counter</string>
+    <string name="P_plus">P+</string>
+    <string name="P_minus">P-</string>
+    <string name="DefaultLife">" "</string>
+    <string name="Restart">Restart</string>
+    <string name="newGame">New game</string>
+</resources>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/HorizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/StealLifeP2toP1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="StealLifeP2toP1"
+        app:layout_constraintBottom_toTopOf="@+id/HorizontalGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_upward_24"
+        app:tint="#F44336" />
+
+    <ImageButton
+        android:id="@+id/StealLifeP1toP2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="StealLifeP1toP2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/HorizontalGuideline"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24"
+        app:tint="#F44336" />
+
+    <ImageButton
+        android:id="@+id/P1loseLife"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="P1LoseLife"
+        app:layout_constraintBottom_toTopOf="@+id/StealLifeP2toP1"
+        app:layout_constraintEnd_toEndOf="@+id/P1losePoison"
+        app:layout_constraintStart_toStartOf="@+id/P1losePoison"
+        app:layout_constraintTop_toBottomOf="@+id/P1losePoison"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+        app:tint="#F44336" />
+
+    <ImageButton
+        android:id="@+id/P2loseLife"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="P2LoseLife"
+        app:layout_constraintBottom_toTopOf="@+id/P2losePoison"
+        app:layout_constraintEnd_toEndOf="@+id/P2losePoison"
+        app:layout_constraintStart_toStartOf="@+id/P2losePoison"
+        app:layout_constraintTop_toBottomOf="@+id/StealLifeP1toP2"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+        app:tint="#F44336" />
+
+    <ImageButton
+        android:id="@+id/P2getLife"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="P2GetLife"
+        app:layout_constraintBottom_toTopOf="@+id/P2getPoison"
+        app:layout_constraintEnd_toEndOf="@+id/P2getPoison"
+        app:layout_constraintStart_toStartOf="@+id/P2getPoison"
+        app:layout_constraintTop_toBottomOf="@+id/StealLifeP1toP2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_favorite_24"
+        app:tint="#F44336" />
+
+    <ImageButton
+        android:id="@+id/P1getLife"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="P1GetLife"
+        app:layout_constraintBottom_toTopOf="@+id/StealLifeP2toP1"
+        app:layout_constraintEnd_toEndOf="@+id/P1getPoison"
+        app:layout_constraintStart_toStartOf="@+id/P1getPoison"
+        app:layout_constraintTop_toBottomOf="@+id/P1getPoison"
+        app:srcCompat="@drawable/ic_baseline_favorite_24"
+        app:tint="#F44336" />
+
+    <Button
+        android:id="@+id/P1getPoison"
+        android:layout_width="105dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="P1GetPoison"
+        android:text="@string/P_plus"
+        android:textColor="#3CC542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/Theme.MagicLifeCounter.PoisonButtons"
+        />
+
+    <Button
+        android:id="@+id/P2getPoison"
+        android:layout_width="105dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="P2GetPoison"
+        android:text="@string/P_plus"
+        android:textColor="#3CC542"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:theme="@style/Theme.MagicLifeCounter.PoisonButtons"
+        />
+
+    <Button
+        android:id="@+id/P1losePoison"
+        android:layout_width="106dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="P1LosePoison"
+        android:text="@string/P_minus"
+        android:textColor="#3CC542"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/Theme.MagicLifeCounter.PoisonButtons"
+        />
+
+    <Button
+        android:id="@+id/P2losePoison"
+        android:layout_width="106dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="P2LosePoison"
+        android:text="@string/P_minus"
+        android:textColor="#3CC542"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:theme="@style/Theme.MagicLifeCounter.PoisonButtons"
+        />
+
+    <TextView
+        android:id="@+id/P1status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/DefaultLife"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/StealLifeP2toP1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/P2status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/DefaultLife"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StealLifeP1toP2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
