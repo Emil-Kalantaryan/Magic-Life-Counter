@@ -89,7 +89,7 @@
         android:id="@+id/P1getLife"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="4dp"
         android:onClick="P1GetLife"
         app:layout_constraintBottom_toBottomOf="@+id/P1getPoison"
