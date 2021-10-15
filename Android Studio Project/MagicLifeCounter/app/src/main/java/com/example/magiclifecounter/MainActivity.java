@@ -149,9 +149,14 @@ public class MainActivity extends AppCompatActivity {
         builder.setMessage(msg+
                 "\n\nPlayer 1 status: "+P1Life+"/"+P1Poison+
                 "\nPlayer 2 status: "+P2Life+"/"+P2Poison);
-        builder.setPositiveButton("Restart", (dialogInterface, i) -> resetValues());
+        builder.setPositiveButton("Restart", (dialogInterface, i) -> restartWithSnackbar());
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    public void restartWithSnackbar() {
+        resetValues();
+        Snackbar.make(getWindow().getDecorView().getRootView(), R.string.Restart, Snackbar.LENGTH_SHORT).show();
     }
 
     @Override
@@ -163,8 +168,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        resetValues();
-        Snackbar.make(getWindow().getDecorView().getRootView(), R.string.Restart, Snackbar.LENGTH_SHORT).show();
+        restartWithSnackbar();
         return true;
     }
 
